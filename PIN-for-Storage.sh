@@ -179,6 +179,8 @@ echo "#!/bin/bash
 rm /usr/local/.removablestoragestatus.log
 # Update inventory to update Extension Attribute			
 jamf recon
+# Close swiftDialog timer Window in case it is still running
+pkill Dialog
 # Give it a few seconds to make sure the next step works
 sleep 10
 # Force Plan Update in Protect
